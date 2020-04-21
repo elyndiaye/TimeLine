@@ -31,8 +31,8 @@ class ItemCell: UITableViewCell, NibReusable {
         self.valueLbl.text = "\(value)"
         print(item.valor)
         self.origemLbl.text = item.origem
-        guard let category = (item.categoria) else {return}
-        self.categoryLbl.text = "Categoria:\(category)"
+      //  guard let category = (item.categoria) else {return}
+        self.categoryLbl.text = "Categoria:\(item.categoria)"
     }
     
 }

@@ -13,7 +13,7 @@ struct Release: Codable {
     let id: Int?
     let valor: Double?
     let origem: String?
-    let categoria, mesLancamento: Int?
+    let categoria, mesLancamento: Int
 
     enum CodingKeys: String, CodingKey {
         case id, valor, origem, categoria
