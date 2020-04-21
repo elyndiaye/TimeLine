@@ -54,14 +54,22 @@ class ReleaseViewController: UIViewController {
     //MARK: - SetupTableView
     func setupTableView(with item:[Release]){
         tableViewDataSource = ItemTableViewDataSource(items: item, tableView: screen.table)
-        tableViewDelegate = ItemTableViewDelegate(items: item)//, delegate: self
+        tableViewDelegate = ItemTableViewDelegate(items: item, delegate: self)
         
         screen.table.dataSource = tableViewDataSource
         screen.table.delegate = tableViewDelegate
         screen.table.reloadData()
     }
-    
-
 
 }
 
+//MARK: - PROTOCOL ITEM SELECTION DELEGATE
+extension ReleaseViewController: ItemSelectionDelegate{
+    func didSelect(item: Release) {
+        print(item.origem)
+        let controller = ItemDetailViewController()
+        controller.itemDetail = item
+        self.navigationController?.pushViewController(controller, animated: true)
+        //DisplayTextField(text: "\(item.title)", message: "\(item.itemDescription)")
+    }
+}

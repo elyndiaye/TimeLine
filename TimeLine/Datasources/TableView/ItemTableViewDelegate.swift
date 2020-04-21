@@ -9,17 +9,19 @@
 import UIKit
 
 final class ItemTableViewDelegate: NSObject, UITableViewDelegate{
-    //weak var delegate: ItemSelectionDelegate?
+    weak var delegate: ItemSelectionDelegate?
     let items:[Release]
-                        //, delegate: ItemSelectionDelegate
-    init(items: [Release]){
-        self.items = items
-       // self.delegate = delegate
+                        
+    init(items: [Release], delegate: ItemSelectionDelegate){
+        self.items = items.sorted(by: {
+            $0.mesLancamento > $1.mesLancamento
+        })
+        self.delegate = delegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let itemCell = items[indexPath.row]
-       // delegate?.didSelect(item: itemCell)
+        delegate?.didSelect(item: itemCell)
     }
     
 }

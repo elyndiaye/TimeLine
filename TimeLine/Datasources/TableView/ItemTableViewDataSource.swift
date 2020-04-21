@@ -12,8 +12,7 @@ final class ItemTableViewDataSource: NSObject, UITableViewDataSource{
     var items:[Release]
     
     init(items: [Release], tableView: UITableView){
-        self.items = items
-        self.items = self.items.sorted(by: {
+        self.items = items.sorted(by: {
             $0.mesLancamento > $1.mesLancamento
         })
         super.init()

@@ -7,3 +7,6 @@
 //
 
 import Foundation
+protocol ItemSelectionDelegate: class {
+    func didSelect(item: Release)
+}
