@@ -20,3 +20,19 @@ struct Release: Codable {
         case mesLancamento = "mes_lancamento"
     }
 }
+
+/*struct ReleaseCache:Codable {
+    let releases: [Release]
+}
+
+struct Release: Codable {
+    let id: Int?
+    let valor: Double?
+    let origem: String?
+    let categoria, mesLancamento: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case id, valor, origem, categoria
+        case mesLancamento = "mes_lancamento"
+    }
+}*/

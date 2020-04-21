@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7F85D03AAD69AC6B36F23354 /* Pods_TimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686C5BAB1D8CD2890BE336DD /* Pods_TimeLine.framework */; };
+		8007209D244F449C007719D9 /* ItemTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007209C244F449C007719D9 /* ItemTableViewDataSource.swift */; };
+		800720A0244F44CF007719D9 /* ItemTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007209F244F44CF007719D9 /* ItemTableViewDelegate.swift */; };
 		80EB2F3C244E8BF600265DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB2F3B244E8BF600265DC5 /* AppDelegate.swift */; };
 		80EB2F3E244E8BF600265DC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB2F3D244E8BF600265DC5 /* SceneDelegate.swift */; };
-		80EB2F40244E8BF600265DC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB2F3F244E8BF600265DC5 /* ViewController.swift */; };
+		80EB2F40244E8BF600265DC5 /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB2F3F244E8BF600265DC5 /* ReleaseViewController.swift */; };
 		80EB2F43244E8BF600265DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EB2F41244E8BF600265DC5 /* Main.storyboard */; };
 		80EB2F46244E8BF600265DC5 /* TimeLine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80EB2F44244E8BF600265DC5 /* TimeLine.xcdatamodeld */; };
 		80EB2F48244E8BF700265DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80EB2F47244E8BF700265DC5 /* Assets.xcassets */; };
@@ -41,10 +43,12 @@
 		2D26E758070FC26D3F2492AB /* Pods-TimeLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeLineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeLineTests/Pods-TimeLineTests.release.xcconfig"; sourceTree = "<group>"; };
 		575FB38122E786B0AAC2FD8D /* Pods-TimeLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeLineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeLineTests/Pods-TimeLineTests.debug.xcconfig"; sourceTree = "<group>"; };
 		686C5BAB1D8CD2890BE336DD /* Pods_TimeLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8007209C244F449C007719D9 /* ItemTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewDataSource.swift; sourceTree = "<group>"; };
+		8007209F244F44CF007719D9 /* ItemTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewDelegate.swift; sourceTree = "<group>"; };
 		80EB2F38244E8BF600265DC5 /* TimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EB2F3B244E8BF600265DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80EB2F3D244E8BF600265DC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		80EB2F3F244E8BF600265DC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		80EB2F3F244E8BF600265DC5 /* ReleaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReleaseViewController.swift; path = ../ReleaseViewController.swift; sourceTree = "<group>"; };
 		80EB2F42244E8BF600265DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80EB2F45244E8BF600265DC5 /* TimeLine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeLine.xcdatamodel; sourceTree = "<group>"; };
 		80EB2F47244E8BF700265DC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 				264C9A98BE8C5CD8E02AC357 /* Pods_TimeLineTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8007209B244F446D007719D9 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				8007209C244F449C007719D9 /* ItemTableViewDataSource.swift */,
+				8007209F244F44CF007719D9 /* ItemTableViewDelegate.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		80EB2F2F244E8BF600265DC5 = {
@@ -166,7 +179,7 @@
 		80EB2F61244E905000265DC5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				80EB2F3F244E8BF600265DC5 /* ViewController.swift */,
+				80EB2F3F244E8BF600265DC5 /* ReleaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +195,7 @@
 		80EB2F63244E907800265DC5 /* Datasources */ = {
 			isa = PBXGroup;
 			children = (
+				8007209B244F446D007719D9 /* TableView */,
 			);
 			path = Datasources;
 			sourceTree = "<group>";
@@ -395,12 +409,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				80EB2F46244E8BF600265DC5 /* TimeLine.xcdatamodeld in Sources */,
-				80EB2F40244E8BF600265DC5 /* ViewController.swift in Sources */,
+				80EB2F40244E8BF600265DC5 /* ReleaseViewController.swift in Sources */,
 				80EB2F3C244E8BF600265DC5 /* AppDelegate.swift in Sources */,
+				800720A0244F44CF007719D9 /* ItemTableViewDelegate.swift in Sources */,
 				80EB2F68244E962700265DC5 /* CodeView.swift in Sources */,
 				80EB2F74244EA95F00265DC5 /* ItemCell.swift in Sources */,
 				80EB2F6A244E969A00265DC5 /* Constants.swift in Sources */,
 				80EB2F65244E91D900265DC5 /* ItemView.swift in Sources */,
+				8007209D244F449C007719D9 /* ItemTableViewDataSource.swift in Sources */,
 				80EB2F3E244E8BF600265DC5 /* SceneDelegate.swift in Sources */,
 				80EB2F70244E9C8800265DC5 /* ItemServiceImpl.swift in Sources */,
 				80EB2F6E244E9B8F00265DC5 /* Release.swift in Sources */,

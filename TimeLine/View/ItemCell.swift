@@ -26,4 +26,13 @@ class ItemCell: UITableViewCell, NibReusable {
         // Configure the view for the selected state
     }
     
+    func configureCell(item: Release){
+        guard let value = (item.valor) else {return}
+        self.valueLbl.text = "\(value)"
+        print(item.valor)
+        self.origemLbl.text = item.origem
+        guard let category = (item.categoria) else {return}
+        self.categoryLbl.text = "Categoria:\(category)"
+    }
+    
 }

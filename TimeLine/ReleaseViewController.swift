@@ -8,14 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ReleaseViewController: UIViewController {
     
     let screen = ItemView()
     
     var service: ItemService = ItemServiceImpl()
-    var items = [Release]()
+    var item = [Release]()
+    
+    var tableViewDataSource: ItemTableViewDataSource?
+    var tableViewDelegate: ItemTableViewDelegate?
     
     override func loadView() {
+        super.loadView()
         self.view = screen
         
     }
@@ -23,6 +27,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.screen.table.isHidden = true
+        screen.load.startAnimating()
         api()
     }
     
@@ -30,19 +36,29 @@ class ViewController: UIViewController {
     func api(){
         service.getItens(){ [weak self] items in
             guard let self = self else { return }
-             self.items.append(contentsOf: items)
-            print(self.items)
+             self.item.append(contentsOf: items)
+            print(self.item.count)
             DispatchQueue.main.async {
-                if self.items.count >= 1 {
+                if self.item.count >= 1 {
                     self.screen.load.stopAnimating()
                     self.screen.load.isHidden = true
                     self.screen.table.isHidden = false
-                    //self.setupTableView(with: self.items)
+                    self.setupTableView(with: self.item)
                 } else {
                     self.screen.table.isHidden = true
                 }
             }
         }
+    }
+    
+    //MARK: - SetupTableView
+    func setupTableView(with item:[Release]){
+        tableViewDataSource = ItemTableViewDataSource(items: item, tableView: screen.table)
+        tableViewDelegate = ItemTableViewDelegate(items: item)//, delegate: self
+        
+        screen.table.dataSource = tableViewDataSource
+        screen.table.delegate = tableViewDelegate
+        screen.table.reloadData()
     }
     
 
