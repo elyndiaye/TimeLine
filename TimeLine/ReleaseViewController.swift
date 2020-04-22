@@ -34,7 +34,6 @@ class ReleaseViewController: UIViewController {
     // MARK: - API Services
     func api(){
         viewModel.getDataFromAPI { (item) in
-            print(item.count)
             DispatchQueue.main.async {
                 if item.count >= 1 {
                     self.screen.load.stopAnimating()
@@ -64,7 +63,6 @@ class ReleaseViewController: UIViewController {
 //MARK: - PROTOCOL ITEM SELECTION DELEGATE
 extension ReleaseViewController: ItemSelectionDelegate{
     func didSelect(item: Release) {
-        print(item.origem)
         let controller = ItemDetailViewController()
         controller.itemDetail = item
         self.navigationController?.pushViewController(controller, animated: true)

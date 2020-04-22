@@ -14,13 +14,6 @@ typealias CompletionHandler = (_ Success: Bool, _ errorMessage :String?) -> ()
 let BASE_URL = "https://desafio-it-server.herokuapp.com/lancamentos"
 let CATEGORY_URL = "https://desafio-it-server.herokuapp.com/categorias/"
 
-//Segues
-let TO_DETAIL = "toDetail"
-
-
-//  Defaults
-let DETAIL = "detail"
-
 
 // Headers
 let HEADER = [

@@ -22,7 +22,6 @@ class JsonHelper {
         let data = loadJson()
         let decoder = JSONDecoder()
         let items = try! decoder.decode([Release].self, from: data)
-        print(items)
         return items
     }
     
