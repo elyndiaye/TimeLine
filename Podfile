@@ -6,7 +6,6 @@ project 'TimeLine.xcodeproj'
 target 'TimeLine' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-    pod 'Alamofire', '~> 4.8.1'
     pod 'Reusable', '~> 4.0.2'
     pod 'SnapKit', '~> 5.0.0'
   # Pods for TimeLine

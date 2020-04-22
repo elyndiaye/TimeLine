@@ -12,9 +12,6 @@ class ReleaseViewController: UIViewController {
     
     let screen = ItemView()
     
-//    var service: ItemService = ItemServiceImpl()
-//    var item = [Release]()
-    
     var viewModel = ReleaseViewModel()
     
     var tableViewDataSource: ItemTableViewDataSource?

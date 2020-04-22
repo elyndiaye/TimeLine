@@ -19,7 +19,7 @@ class ReleaseViewControllerSpec: QuickSpec {
             
             beforeEach {
                 controller = ReleaseViewController()
-                controller.service = ReleaseServiceMock()
+                controller.viewModel.service = ReleaseServiceMock()
                 controller.beginAppearanceTransition(true, animated: false)
                 controller.endAppearanceTransition()
             }
@@ -29,7 +29,7 @@ class ReleaseViewControllerSpec: QuickSpec {
             }
 
             it("should have the expected number of Items") {
-                expect(controller.item.count).to(equal(40))
+                expect(controller.viewModel.item.count).to(equal(40))
             }
         }
     }
