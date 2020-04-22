@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "valor": 13.3,
+    "origem": "Uber",
+    "categoria": 1,
+    "mes_lancamento": 1
+  },
+  {
+    "id": 2,
+    "valor": 130.5,
+    "origem": "PS Store",
+    "categoria": 2,
+    "mes_lancamento": 2
+  },
+  {
+    "id": 3,
+    "valor": 1023.66,
+    "origem": "Carrefour",
+    "categoria": 6,
+    "mes_lancamento": 5
+  },
+  {
+    "id": 4,
+    "valor": 132.44,
+    "origem": "Mercado Três Irmãos",
+    "categoria": 6,
+    "mes_lancamento": 6
+  },
+  {
+    "id": 5,
+    "valor": 65.3,
+    "origem": "Drogasil",
+    "categoria": 3,
+    "mes_lancamento": 7
+  },
+  {
+    "id": 6,
+    "valor": 12.5,
+    "origem": "Uber",
+    "categoria": 1,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 7,
+    "valor": 87.2,
+    "origem": "Uber",
+    "categoria": 3,
+    "mes_lancamento": 7
+  },
+  {
+    "id": 8,
+    "valor": 44.3,
+    "origem": "PS Store",
+    "categoria": 2,
+    "mes_lancamento": 2
+  },
+  {
+    "id": 9,
+    "valor": 234.45,
+    "origem": "Oficina Bom Sucesso",
+    "categoria": 4,
+    "mes_lancamento": 1
+  },
+  {
+    "id": 10,
+    "valor": 70.98,
+    "origem": "Restaurante Madero",
+    "categoria": 5,
+    "mes_lancamento": 5
+  },
+  {
+    "id": 11,
+    "valor": 33.52,
+    "origem": "Pet Shop Lowcão",
+    "categoria": 3,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 12,
+    "valor": 123.3,
+    "origem": "Drogasil",
+    "categoria": 3,
+    "mes_lancamento": 6
+  },
+  {
+    "id": 13,
+    "valor": 7.9,
+    "origem": "Uber",
+    "categoria": 1,
+    "mes_lancamento": 7
+  },
+  {
+    "id": 14,
+    "valor": 12.3,
+    "origem": "Uber",
+    "categoria": 1,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 15,
+    "valor": 299.9,
+    "origem": "PS Store",
+    "categoria": 2,
+    "mes_lancamento": 2
+  },
+  {
+    "id": 16,
+    "valor": 34.3,
+    "origem": "PS Store",
+    "categoria": 2,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 17,
+    "valor": 199.3,
+    "origem": "Oficina Bom Sucesso",
+    "categoria": 4,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 18,
+    "valor": 88.3,
+    "origem": "Restaurante Madero",
+    "categoria": 5,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 19,
+    "valor": 56.3,
+    "origem": "Pet Shop Lowcão",
+    "categoria": 3,
+    "mes_lancamento": 1
+  },
+  {
+    "id": 20,
+    "valor": 890.3,
+    "origem": "Carrefour",
+    "categoria": 6,
+    "mes_lancamento": 2
+  },
+  {
+    "id": 21,
+    "valor": 22.3,
+    "origem": "Mercado Três Irmãos",
+    "categoria": 6,
+    "mes_lancamento": 1
+  },
+  {
+    "id": 22,
+    "valor": 13.3,
+    "origem": "Drogasil",
+    "categoria": 3,
+    "mes_lancamento": 5
+  },
+  {
+    "id": 23,
+    "valor": 97.98,
+    "origem": "Restaurante Madero",
+    "categoria": 5,
+    "mes_lancamento": 5
+  },
+  {
+    "id": 24,
+    "valor": 33.52,
+    "origem": "Pet Shop Lowcão",
+    "categoria": 3,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 25,
+    "valor": 44.79,
+    "origem": "Drogasil",
+    "categoria": 3,
+    "mes_lancamento": 6
+  },
+  {
+    "id": 26,
+    "valor": 7.9,
+    "origem": "Uber",
+    "categoria": 1,
+    "mes_lancamento": 7
+  },
+  {
+    "id": 27,
+    "valor": 44.3,
+    "origem": "PS Store",
+    "categoria": 2,
+    "mes_lancamento": 2
+  },
+  {
+    "id": 28,
+    "valor": 4.45,
+    "origem": "Oficina Bom Sucesso",
+    "categoria": 4,
+    "mes_lancamento": 1
+  },
+  {
+    "id": 29,
+    "valor": 87.9,
+    "origem": "Restaurante Madero",
+    "categoria": 5,
+    "mes_lancamento": 5
+  },
+  {
+    "id": 30,
+    "valor": 33.52,
+    "origem": "Pet Shop Lowcão",
+    "categoria": 3,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 31,
+    "valor": 4.8,
+    "origem": "Drogasil",
+    "categoria": 3,
+    "mes_lancamento": 6
+  },
+  {
+    "id": 32,
+    "valor": 7.9,
+    "origem": "Uber",
+    "categoria": 1,
+    "mes_lancamento": 7
+  },
+  {
+    "id": 33,
+    "valor": 12.3,
+    "origem": "Uber",
+    "categoria": 1,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 34,
+    "valor": 149.9,
+    "origem": "PS Store",
+    "categoria": 2,
+    "mes_lancamento": 2
+  },
+  {
+    "id": 35,
+    "valor": 34.3,
+    "origem": "PS Store",
+    "categoria": 2,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 36,
+    "valor": 199.3,
+    "origem": "Oficina Bom Sucesso",
+    "categoria": 4,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 37,
+    "valor": 88.3,
+    "origem": "Restaurante Madero",
+    "categoria": 5,
+    "mes_lancamento": 3
+  },
+  {
+    "id": 38,
+    "valor": 56.3,
+    "origem": "Pet Shop Lowcão",
+    "categoria": 3,
+    "mes_lancamento": 1
+  },
+  {
+    "id": 39,
+    "valor": 890.3,
+    "origem": "Carrefour",
+    "categoria": 6,
+    "mes_lancamento": 2
+  },
+  {
+    "id": 40,
+    "valor": 22.3,
+    "origem": "Mercado Três Irmãos",
+    "categoria": 6,
+    "mes_lancamento": 1
+  }
+]
