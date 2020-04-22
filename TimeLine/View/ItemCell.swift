@@ -29,7 +29,7 @@ class ItemCell: UITableViewCell, NibReusable {
     func configureCell(item: Release){
         guard let value = (item.valor) else {return}
         self.valueLbl.text = "\(value)"
-        print(item.valor)
+        //print(item.valor)
         self.origemLbl.text = item.origem
       //  guard let category = (item.categoria) else {return}
         self.categoryLbl.text = "Categoria:\(item.categoria)"

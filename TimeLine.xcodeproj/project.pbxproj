@@ -13,6 +13,11 @@
 		800720A3244F8A50007719D9 /* ItemSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800720A2244F8A50007719D9 /* ItemSelectionDelegate.swift */; };
 		800720A5244F989D007719D9 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800720A4244F989D007719D9 /* ItemDetail.swift */; };
 		800720A7244F9CD9007719D9 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800720A6244F9CD9007719D9 /* ItemDetailViewController.swift */; };
+		800720A9244FC82E007719D9 /* ItemDetailViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800720A8244FC82E007719D9 /* ItemDetailViewSpec.swift */; };
+		800720AC244FCE8E007719D9 /* releases.json in Resources */ = {isa = PBXBuildFile; fileRef = 800720AB244FCE8E007719D9 /* releases.json */; };
+		800720AE244FCEAE007719D9 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800720AD244FCEAE007719D9 /* JsonHelper.swift */; };
+		800720B0244FD0AB007719D9 /* ReleaseViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800720AF244FD0AB007719D9 /* ReleaseViewControllerSpec.swift */; };
+		800720B2244FD1AD007719D9 /* ReleaseServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800720B1244FD1AD007719D9 /* ReleaseServiceMock.swift */; };
 		80EB2F3C244E8BF600265DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB2F3B244E8BF600265DC5 /* AppDelegate.swift */; };
 		80EB2F3E244E8BF600265DC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB2F3D244E8BF600265DC5 /* SceneDelegate.swift */; };
 		80EB2F40244E8BF600265DC5 /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB2F3F244E8BF600265DC5 /* ReleaseViewController.swift */; };
@@ -51,6 +56,11 @@
 		800720A2244F8A50007719D9 /* ItemSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionDelegate.swift; sourceTree = "<group>"; };
 		800720A4244F989D007719D9 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		800720A6244F9CD9007719D9 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		800720A8244FC82E007719D9 /* ItemDetailViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewSpec.swift; sourceTree = "<group>"; };
+		800720AB244FCE8E007719D9 /* releases.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = releases.json; sourceTree = "<group>"; };
+		800720AD244FCEAE007719D9 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		800720AF244FD0AB007719D9 /* ReleaseViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseViewControllerSpec.swift; sourceTree = "<group>"; };
+		800720B1244FD1AD007719D9 /* ReleaseServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseServiceMock.swift; sourceTree = "<group>"; };
 		80EB2F38244E8BF600265DC5 /* TimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EB2F3B244E8BF600265DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80EB2F3D244E8BF600265DC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +133,15 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		800720AA244FCD57007719D9 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				800720AD244FCEAE007719D9 /* JsonHelper.swift */,
+				800720AB244FCE8E007719D9 /* releases.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		80EB2F2F244E8BF600265DC5 = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +185,12 @@
 		80EB2F54244E8BF700265DC5 /* TimeLineTests */ = {
 			isa = PBXGroup;
 			children = (
-				80EB2F55244E8BF700265DC5 /* TimeLineTests.swift */,
+				800720AA244FCD57007719D9 /* Json */,
 				80EB2F57244E8BF700265DC5 /* Info.plist */,
+				800720A8244FC82E007719D9 /* ItemDetailViewSpec.swift */,
+				800720AF244FD0AB007719D9 /* ReleaseViewControllerSpec.swift */,
+				800720B1244FD1AD007719D9 /* ReleaseServiceMock.swift */,
+				80EB2F55244E8BF700265DC5 /* TimeLineTests.swift */,
 			);
 			path = TimeLineTests;
 			sourceTree = "<group>";
@@ -322,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800720AC244FCE8E007719D9 /* releases.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +463,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800720B0244FD0AB007719D9 /* ReleaseViewControllerSpec.swift in Sources */,
+				800720AE244FCEAE007719D9 /* JsonHelper.swift in Sources */,
+				800720A9244FC82E007719D9 /* ItemDetailViewSpec.swift in Sources */,
+				800720B2244FD1AD007719D9 /* ReleaseServiceMock.swift in Sources */,
 				80EB2F56244E8BF700265DC5 /* TimeLineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
