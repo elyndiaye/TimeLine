@@ -15,9 +15,11 @@ class ReleaseViewModel {
     
     func getDataFromAPI(completionBlock : @escaping completionBlock){
         
-        service.getItens()        { [weak self] (items) in
-            self?.item = items
-            completionBlock(items)
+        service.getItens(){ [weak self] (result) in
+            if case .success(let items) = result {
+                self?.item = items
+                completionBlock(items)
+            }
         }
     }
     

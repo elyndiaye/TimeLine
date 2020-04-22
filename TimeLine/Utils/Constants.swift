@@ -12,6 +12,7 @@ typealias CompletionHandler = (_ Success: Bool, _ errorMessage :String?) -> ()
 
 // URL Constants
 let BASE_URL = "https://desafio-it-server.herokuapp.com/lancamentos"
+let CATEGORY_URL = "https://desafio-it-server.herokuapp.com/categorias/"
 
 //Segues
 let TO_DETAIL = "toDetail"
