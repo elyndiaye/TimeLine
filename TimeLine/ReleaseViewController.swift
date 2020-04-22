@@ -12,8 +12,10 @@ class ReleaseViewController: UIViewController {
     
     let screen = ItemView()
     
-    var service: ItemService = ItemServiceImpl()
-    var item = [Release]()
+//    var service: ItemService = ItemServiceImpl()
+//    var item = [Release]()
+    
+    var viewModel = ReleaseViewModel()
     
     var tableViewDataSource: ItemTableViewDataSource?
     var tableViewDelegate: ItemTableViewDelegate?
@@ -34,20 +36,19 @@ class ReleaseViewController: UIViewController {
     
     // MARK: - API Services
     func api(){
-        service.getItens(){ [weak self] items in
-            guard let self = self else { return }
-             self.item.append(contentsOf: items)
-            print(self.item.count)
+        viewModel.getDataFromAPI { (item) in
+            print(item.count)
             DispatchQueue.main.async {
-                if self.item.count >= 1 {
+                if item.count >= 1 {
                     self.screen.load.stopAnimating()
                     self.screen.load.isHidden = true
                     self.screen.table.isHidden = false
-                    self.setupTableView(with: self.item)
+                    self.setupTableView(with:item)
                 } else {
                     self.screen.table.isHidden = true
                 }
             }
+            
         }
     }
     
@@ -70,6 +71,5 @@ extension ReleaseViewController: ItemSelectionDelegate{
         let controller = ItemDetailViewController()
         controller.itemDetail = item
         self.navigationController?.pushViewController(controller, animated: true)
-        //DisplayTextField(text: "\(item.title)", message: "\(item.itemDescription)")
     }
 }
