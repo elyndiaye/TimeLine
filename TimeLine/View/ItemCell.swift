@@ -14,6 +14,7 @@ class ItemCell: UITableViewCell, NibReusable {
     @IBOutlet weak var categoryLbl: UILabel!
     @IBOutlet weak var origemLbl: UILabel!
     @IBOutlet weak var valueLbl: UILabel!
+    @IBOutlet weak var monthLbl: UILabel!
     
     
     override func awakeFromNib() {
@@ -29,10 +30,10 @@ class ItemCell: UITableViewCell, NibReusable {
     func configureCell(item: Release){
         guard let value = (item.valor) else {return}
         self.valueLbl.text = "\(value)"
-        //print(item.valor)
         self.origemLbl.text = item.origem
-      //  guard let category = (item.categoria) else {return}
-        self.categoryLbl.text = "Categoria:\(item.categoria)"
+        guard let category = (item.categoriaNome) else {return}
+        self.categoryLbl.text = "Categoria: \(category)"
+        self.monthLbl.text = "\(item.mesLancamento)"
     }
     
 }

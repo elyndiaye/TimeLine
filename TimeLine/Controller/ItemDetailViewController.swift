@@ -33,7 +33,8 @@ class ItemDetailViewController: UIViewController {
         }
         
         screenDetail.origemLbl.text = itemDetail.origem
-        screenDetail.valueLbl.text = "\(itemDetail.valor)"
+        guard let valor = itemDetail.valor else { return }
+        screenDetail.valueLbl.text = "\(valor)"
         screenDetail.idLbl.text = "\(itemDetail.id)"
         screenDetail.mesLbl.text = "\(itemDetail.mesLancamento)"
         

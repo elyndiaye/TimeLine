@@ -61,6 +61,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="categoryLbl" destination="6NY-rk-hj0" id="VCf-EN-BAr"/>
+                <outlet property="monthLbl" destination="SBZ-co-ync" id="JIe-lW-nBI"/>
                 <outlet property="origemLbl" destination="7YC-Q2-xG8" id="Am5-h2-Zkq"/>
                 <outlet property="valueLbl" destination="sCI-X0-jvA" id="T2w-jL-Fkp"/>
             </connections>

@@ -26,7 +26,7 @@ final class ItemView: UIView{
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
-        backgroundColor = .blue
+        backgroundColor = .orange
         setupView()
         
     }
