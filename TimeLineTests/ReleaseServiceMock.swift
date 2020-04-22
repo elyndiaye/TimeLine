@@ -10,6 +10,7 @@
 
 class ReleaseServiceMock: ItemService {
     
+    
     let items: [Release]
     private let jsonHelper: JsonHelper
     
@@ -18,7 +19,7 @@ class ReleaseServiceMock: ItemService {
         self.items = jsonHelper.decodeJson()
     }
     
-    func getItens(completionHandler: @escaping ([Release]) -> Void) {
-        completionHandler(self.items)
+    func getItens(completionHandler: @escaping (Result<[Release], Error>) -> Void) {
+        completionHandler(.success(self.items))
     }
 }

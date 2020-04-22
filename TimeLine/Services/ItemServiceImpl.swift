@@ -7,40 +7,60 @@
 //
 
 import Foundation
-import Alamofire
 
 protocol ItemService {
-    func getItens(completionHandler: @escaping ([Release]) -> Void )
+    func getItens(completionHandler: @escaping (Result<[Release], Error>) -> Void )
 }
 
 class ItemServiceImpl: ItemService {
+    
+    var apiCLiente = APIClient()
     
     static let instance = ItemServiceImpl()
     
     var itens = [Release]()
     
-    func getItens(completionHandler: @escaping ([Release]) -> Void ) {
-        Alamofire.request("\(BASE_URL)", method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response:DataResponse<Any>) in
-            
-            let arrayItens = [Release]()
-            
-            if response.result.error == nil {
-                guard let data = response.data else { return }
-                
-                
-                do {
-                    let decoder = JSONDecoder()
-                    let decodedItens = try decoder.decode([Release].self, from: data)
-                    
-                    completionHandler(decodedItens)
-                } catch let error {
-                    print(error)
-                    completionHandler(arrayItens)
-                    debugPrint(response.result.error as Any)
+    func getItens(completionHandler: @escaping (Result<[Release], Error>) -> Void ) {
+        apiCLiente.fetchData(url: BASE_URL) { (response) in
+            switch response{
+            case .success(let data):
+                let decoder = JSONDecoder()
+                guard let decodedItens = try? decoder.decode([Release].self, from: data) else {
+                    completionHandler(.failure(RequestError.decoded))
+                    return
                 }
-            } else {
-                debugPrint(response.result.error as Any)
+                //completion
+                self.getCategory(completionHandler: completionHandler, releaseArray: decodedItens)
+            case .failure(let error):
+                completionHandler(.failure(error))
             }
+            
         }
     }
+    
+    func getCategory(completionHandler: @escaping (Result<[Release], Error>) -> Void , releaseArray: [Release] ){
+        apiCLiente.fetchData(url: CATEGORY_URL) { (response) in
+            switch response{
+            case .success(let data):
+                let decoder = JSONDecoder()
+                guard let categores = try? decoder.decode([Category].self, from: data) else {
+                    completionHandler(.failure(RequestError.decoded))
+                    return
+                }
+                var releases: [Release] = []
+                for var release in releaseArray {
+                    release.categoriaNome = categores.first(where: { (category) -> Bool in
+                        return category.id == release.categoria
+                        })?.nome
+                    releases.append(release)
+                }
+                completionHandler(.success(releases))
+                
+            case .failure(let error):
+                completionHandler(.failure(error))
+            }
+            
+        }
+    }
+    
 }
